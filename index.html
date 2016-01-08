@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Drawing Application</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <!-- <canvas> tag is used to draw graphics, However, the <canvas> element has no drawing abilities of its own (it is only a container for graphics) - you must use a script to actually draw the graphics. The getContext() method returns an object that provides methods and properties for drawing on the canvas. -->
+
+	<canvas	width="600" height="400"></canvas>
+	<div class="controls">
+
+  <!-- Color Circles -->
+		<ul>
+			<li class="red selected"></li>
+			<li class="blue"></li>
+			<li class="yellow"></li>
+		</ul>
+
+  <!-- Button: New Color -->
+		<button id="revealColorSelect">New Color</button>
+
+  <!-- Color Thumbnail & Sliders -->
+		<div id="colorSelectBox">
+			<span id="newColor"></span>
+			<div class="sliders">
+				<p>
+					<label for="red">Red</label>
+					<input id="red" name="red" type="range" min=0 max=255 value=0>
+				</p>
+				<p>
+					<label for="green">Green</label>
+					<input id="green" name="green" type="range" min=0 max=255 value=0>
+				</p>
+				<p>
+					<label for="blue">Blue</label>
+					<input id="blue" name="blue" type="range" min=0 max=255 value=0>
+				</p>
+			 </div>   <!-- /sliders -->
+
+  <!-- Button: Add Color -->
+		 <div>
+			<button id="addNewColor">Add Color</button>
+		 </div>
+
+		</div>   <!-- /id='colorSelector' -->
+	</div>   <!-- /class='controls' -->
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+
+  </body>
+</html>
